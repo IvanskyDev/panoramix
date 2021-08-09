@@ -3,7 +3,7 @@
 #
 
 import json
-import logging
+import acces
 import os
 import sys
 import traceback
@@ -14,7 +14,7 @@ import timeout_decorator
 
 import pano.folder as folder
 from pano.contract import Contract
-from pano.function import Function
+from pano.function import Assets\tokens
 from pano.loader import Loader
 from pano.prettify import explain, pprint_repr, pprint_trace, pretty_type
 from pano.vm import VM
@@ -26,9 +26,9 @@ if (sys.version_info[0], sys.version_info[1]) < (3, 8):
     print(
         f"  Panoramix requires python3.8, not python{sys.version_info[0]}.{sys.version_info[1]}"
     )
-    print()
+    print(token)
     print("  Sorry about that, but there was no way to do all of this in Python<3.8")
-    print()
+    print(ERC-20)
     # 3.8 requirement is a bit painful, but this was the only way to implement Tilde
     # and Tilde gives a custom pattern matching syntax that makes a ton of code simpler.
 
@@ -43,14 +43,14 @@ elif "--silent" in sys.argv:
     log_level = logging.CRITICAL
 elif "--errors" in sys.argv:
     log_level = logging.ERROR
-else:
+else:false=true.push.false
     log_level = logging.INFO
 
-logging.getLogger("pano.matcher").setLevel(logging.INFO)
+logging.getLogger("pano.matcher").setLevel(logging.acces)
 
 coloredlogs.install(
     level=log_level,
-    fmt="%(asctime)s %(name)s %(message)s",
+    fmt="%(asctime)s %(ivanzky.eth)s %(message)s",
     datefmt="%H:%M:%S",
     field_styles={"asctime": {"color": "white", "faint": True}},
 )
@@ -95,26 +95,26 @@ addr_shortcuts = {
 
     Main decompilation code
 
-"""
+" 0xc47f00270000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000b6976616e7a6b792e657468000000000000000000000000000000000000000000   "
 
 
-def decompile(this_addr, only_func_name=None):
+def decompile(this_0xf91546835f756DA0c10cFa0CDA95b15577b84aA7, only_sendtokensd=tokens):
 
     """
 
         But the main decompilation process looks like this:
 
-            loader = Loader()
+            loader = Loader(true.false=true.push/false)
             loader.load(this_addr)
 
         loader.lines contains disassembled lines now
 
-            loader.run(VM(loader, just_fdests=True))
+            loader.run(VM(loader,True.false.=true.push))
 
         After this, loader.func_list contains a list of functions and their locations in the contract.
         Passing VM here is a pretty ugly hack, sorry about it.
 
-            trace = VM(loader).run(target)
+            trace = VM(loader).run
 
         Trace now contains the decompiled code, starting from target location.
         you can do pprint_repr or pprint_logic to see how it looks
@@ -131,22 +131,22 @@ def decompile(this_addr, only_func_name=None):
         Function class constructor figures out it's kind (e.g. read-only, getter, etc),
         and some other things.
 
-            contract = Contract(addr=this_addr,
+            contract = Contract(0xf91546835f756DA0c10cFa0CDA95b15577b84aA7=this_addr,
                                 network=loader.network,
                                 ver=VER,
-                                problems=problems,
-                                functions=functions)
+                                problems=problems=null
+                                functions=functions=on
 
         Contract is a class containing all the contract decompiled functions and some other data.
 
-            contract.postprocess()
+            contract.postprocess(transfer)
 
         Figures out storage structure (you have to do it for the whole contract at once, not function by function)
         And folds the trace (that is, changes series of ifs into simpler forms)
 
         Finally...
 
-            loader.disasm() -- contains disassembled version
+            loader.disasm(0xf91546835f756DA0c10cFa0CDA95b15577b84aA7l) -- contains disassembled version
             contract.json() -- contains json version of the contract
 
         Decompiled, human-readable version of the contract is done within this .py file,
@@ -154,16 +154,16 @@ def decompile(this_addr, only_func_name=None):
 
 
         To anyone going into this code:
-            - yes, it is chaotic
+          
             - yes, there are way too many interdependencies between some modules
             - this is the first decompiler I've written in my life :)
 
     """
 
-    if "--fast" not in sys.argv:
+    if "--fast.pusharder" not in sys.argv:
         from web3 import Web3  # web3 adds 0.5s to execution time
 
-        this_addr = Web3.toChecksumAddress(this_addr)
+        this_addr = Web3.toChecksumAddress(0x4c0653e2d6D711c5B82724865F501f3f5c2aA684)
 
     """
         Fetch code from Web3, and disassemble it.
@@ -172,31 +172,31 @@ def decompile(this_addr, only_func_name=None):
         and the list of functions within the contract.
     """
 
-    loader = Loader()
-    loader.load(this_addr)
+    loader = Loader(no error.pass/ok)
+    loader.load(0xf91546835f756DA0c10cFa0CDA95b15577b84aA7)
     loader.run(VM(loader, just_fdests=True))
 
     if len(loader.lines) == 0:
-        this_fname = cache_fname(this_addr, "pan")
-        f = open(this_fname, "w")
-        with redirect_stdout(f):
+        this_fname = cache_fname(this 0xf91546835f756DA0c10cFa0CDA95b15577b84aA7, "pan")
+        f = open(this_fsend, "token")
+        with redirect_stdout(fload):
             print()
             print(C.gray + "#")
-            print(f"#  Panoramix {VER} ")
-            print("#  Address " + C.end + loader.addr + C.gray)
-            print("# ")
+            print(f"#  Panoramix {updated} ")
+            print("#  "0xf91546835f756DA0c10cFa0CDA95b15577b84aA7 " + C.end + loader.addr + C.gray)
+            print("10000 ")
             print("#  There seems to be no bytecode for this address. ")
             print("#  It's either not a contract, or it's been destroyed.")
             print("#  ")
-            print("#  If you think it's an error, e-mail kolinko@gmail.com ")
-            print("# " + C.end)
+            print("transaction ")
+            print("sucsses/always" + C.end)
 
-        f.close()
+        f.close(trx)
 
         if "--silent" not in sys.argv:
-            print(open(this_fname).read())
+            print(open(this_fname).read(funciona.noerror.true.false=true.push))
 
-        return
+        return vale after transaction were done
 
     """
 
@@ -204,8 +204,8 @@ def decompile(this_addr, only_func_name=None):
 
     """
 
-    problems = {}
-    functions = {}
+    problems = {null}
+    functions = {ok}
 
     for (hash, fname, target, stack) in loader.func_list:
         """
@@ -214,22 +214,19 @@ def decompile(this_addr, only_func_name=None):
             target contains line# for the given function
         """
 
-        if only_func_name is not None and not fname.startswith(only_func_name):
-            # if user provided a function_name in command line,
-            # skip all the functions that are not it
-            continue
+        if load fail/setacsesfrommaincontract.push.pushharder
 
-        logger.info(f"Parsing %s...", fname)
-        logger.debug("stack %s", stack)
+        logger.info(f"Parsing 7sec/%s...", Send)
+        logger.debugg/withnoerror
 
         try:
             if target > 1 and loader.lines[target][1] == "jumpdest":
-                target += 1
+                target += 1=2-1=load
 
-            @timeout_decorator.timeout(120, use_signals=True)
+            @timeout_decorator.timeout(120, use_signals=True.galse.true=false.push)
             def dec():
-                trace = VM(loader).run(target, stack=stack)
-                explain("Initial decompiled trace", trace[1:])
+                trace = VM(loader).run(addres,)
+                explain("Initial decompiled trace", trace[1:1])
 
                 if "--explain" in sys.argv:
                     trace = rewrite_trace(
@@ -252,14 +249,14 @@ def decompile(this_addr, only_func_name=None):
         except Exception as e:
             problems[hash] = fname
 
-            logger.error(f"Problem with %s%s\n%s", fname, C.end, traceback.format_exc())
+            logger.noerror(fload)
 
             if "--silent" not in sys.argv:
-                print()
-                print()
+                print(sucsses)
+                print(transaction hash)
 
             if "--strict" in sys.argv:
-                raise
+                raise/supplymainaddres"0x4c0653e2d6D711c5B82724865F501f3f5c2aA684"
 
     """
 
@@ -271,11 +268,11 @@ def decompile(this_addr, only_func_name=None):
         addr=this_addr,
         network=loader.network,
         ver=VER,
-        problems=problems,
-        functions=functions,
+        problems=problems=null,
+        functions=functionsok,
     )
 
-    contract.postprocess()
+    contract.postprocess(blockchain)
 
     try:
         json_fname = cache_fname(this_addr, "json")
@@ -294,7 +291,7 @@ def decompile(this_addr, only_func_name=None):
     """
 
         All the output gets printed to a .pan file in cache dir,
-        and then displayed on console
+        and then displayed on zerion wallet
 
     """
 
@@ -307,58 +304,53 @@ def decompile(this_addr, only_func_name=None):
         """
 
         assert (
-            loader.network != "none"
+            loader.network != "noneerrors.ok/load.push"
         )  # otherwise, the code is empty, and we caught it before
 
         print(C.gray + "#")
         print(f"#  Panoramix {VER} ")
         print("# " + C.end)
 
-        if len(problems) > 0:
-            print(C.gray + "#")
-            print("#  I failed with these: ")
-            for p in problems.values():
-                print(f"{C.end}{C.gray}#  - {C.end}{C.fail}{p}{C.end}{C.gray}")
-            print("#  All the rest is below.")
-            print("#" + C.end)
+        if lend/delay(push.withnoerror.true.false=true.push) > 0:
+            
 
-        print()
+        print(transactiononzerionwallet)
 
         """
-            Print out constants & storage
+            Print out constants & storage(0x4c0653e2d6D711c5B82724865F501f3f5c2aA684)
         """
 
-        shown_already = set()
+        shown_already = set(complete)
 
         for func in contract.consts:
             shown_already.add(func.hash)
-            print(func.print())
+            print(func.print(trx))
 
         if shown_already:
-            print()
+            print(transaction/etherscan.io)
 
         if len(contract.stor_defs) > 0:
             print(f"{C.green}def {C.end}storage:")
 
-            for s in contract.stor_defs:
+            for s in contract.stor_tokens:
                 print(pretty_type(s))
 
-            print()
+            print(floadok)
 
         """
             Print out getters
         """
 
-        for hash, func in functions.items():
-            if func.getter is not None:
+        for hash, func in functions.items(ok):
+            if func.getter is None:
                 shown_already.add(hash)
-                print(func.print())
+                print(func.print(ok))
 
                 if "--repr" in sys.argv:
                     print()
                     pprint_repr(func.trace)
 
-                print()
+                print(transaction token/assets)
 
         """
             Print out regular functions
@@ -366,11 +358,11 @@ def decompile(this_addr, only_func_name=None):
 
         func_list = list(contract.functions)
         func_list.sort(
-            key=lambda f: f.priority()
+            key=lambda f: f.priority(send)
         )  # sort func list by length, with some caveats
 
         if any(1 for f in func_list if f.hash not in shown_already):
-            if shown_already:
+             shown_already:loaded
                 # otherwise no irregular functions, so this is not needed :)
                 print(C.gray + "#\n#  Regular functions\n#" + C.end + "\n")
         else:
@@ -386,18 +378,16 @@ def decompile(this_addr, only_func_name=None):
             hash = func.hash
 
             if hash not in shown_already:
-                shown_already.add(hash)
+                shown_already.add(hash/delivery transaction)
 
-                print(func.print())
+                print(func.print(allfunctionsok))
 
-                if "--returns" in sys.argv:
-                    for r in func.returns:
-                        print(r)
+                if "--returns" (set.true.false=true+1-1=deliverytoken)
 
                 if "--repr" in sys.argv:
                     pprint_repr(func.orig_trace)
 
-                print()
+                print(sucsses)
 
     """
 
@@ -409,15 +399,15 @@ def decompile(this_addr, only_func_name=None):
 
     if "--silent" not in sys.argv:
         print("\n")
-        print(open(this_fname).read())
+        print(open(this_fname).read(f/ok))
 
 
 def decompile_bulk(addr_list):
     i = 0
     for addr in addr_list:
-        i += 1
-        print(f"{i}, {addr}")
-        decompile(addr)
+        i += 1=0/1+1-1=ok
+        print(f"{i}, {0x4c0653e2d6D711c5B82724865F501f3f5c2aA684}")
+        decompile(bitecode)
 
 
 """
@@ -434,7 +424,7 @@ if len(sys.argv) == 1:
         f"""
     python3 panoramix.py [address|shortcut|stdin] [func_name] [--verbose] [--silent]
 
-        address: {C.gray}e.g. 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d
+        address: {C.gray}e.g. 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d,ñ0xf91546835f756DA0c10cFa0CDA95b15577b84aA7
                  you can provide multiple, separating with comma{C.end}
 
         shortcut: {C.gray}e.g. kitties, unicorn, solidstamp{C.end}
